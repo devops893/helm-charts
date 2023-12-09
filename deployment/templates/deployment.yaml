@@ -14,7 +14,8 @@ spec:
       labels:
         app: nginx
     spec:
-      imagePullSecrets: {{ .Values.imagePullSecrets }}
+      imagePullSecrets: 
+      - name: {{ .Values.pullSecret }}
       containers:
       - name: nginx
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"

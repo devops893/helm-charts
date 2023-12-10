@@ -14,10 +14,10 @@ spec:
       labels:
         app: nginx
     spec:
-      imagePullSecs: 
+      imagePullSecrets: 
       - name: {{ .Values.pullSecret }}
       containers:
       - name: nginx
-        imag: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         ports:
         - containerPort: 80

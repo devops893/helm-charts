@@ -14,7 +14,7 @@ spec:
       labels:
         app: nginx
     spec:
-      imagePullSecrets: 
+      imagePullSecs: 
       - name: {{ .Values.pullSecret }}
       containers:
       - name: nginx
